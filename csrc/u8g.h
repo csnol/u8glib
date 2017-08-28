@@ -399,6 +399,8 @@ extern u8g_dev_t u8g_dev_uc1610_dogxl160_2x_gr_hw_spi;
 /* Display: Generic KS0108b, Size: 128x64 monochrom */
 extern u8g_dev_t u8g_dev_ks0108_128x64;         /* official Arduino Library interface */
 extern u8g_dev_t u8g_dev_ks0108_128x64_fast;    /* faster, but uses private tables from the Arduino Library */
+extern u8g_dev_t u8g_dev_ks0108_192x64;         /* official Arduino Library interface */
+extern u8g_dev_t u8g_dev_ks0108_192x64_fast;    /* faster, but uses private tables from the Arduino Library */
 
 /* Nokia 84x48 Display with PCD8544 */
 extern u8g_dev_t u8g_dev_pcd8544_84x48_sw_spi;
@@ -494,7 +496,6 @@ extern u8g_dev_t u8g_dev_ssd1306_64x48_2x_i2c;
 extern u8g_dev_t u8g_dev_ld7032_60x32_sw_spi;
 extern u8g_dev_t u8g_dev_ld7032_60x32_hw_spi;
 extern u8g_dev_t u8g_dev_ld7032_60x32_parallel;
-extern u8g_dev_t u8g_dev_ld7032_60x32_i2c;		/* not test and not sure of this works */
 
 /* experimental 65K TFT with st7687 controller */
 extern u8g_dev_t u8g_dev_st7687_c144mvgd_sw_spi;
@@ -1511,7 +1512,7 @@ void u8g_i2c_clear_error(void) U8G_NOINLINE;
 uint8_t  u8g_i2c_get_error(void) U8G_NOINLINE;
 uint8_t u8g_i2c_get_err_pos(void) U8G_NOINLINE;
 void u8g_i2c_init(uint8_t options) U8G_NOINLINE;		/* use U8G_I2C_OPT_NONE as options */
-uint8_t u8g_i2c_wait(uint8_t mask, uint8_t value, uint8_t pos) U8G_NOINLINE;
+uint8_t u8g_i2c_wait(uint8_t mask, uint8_t pos) U8G_NOINLINE;
 uint8_t u8g_i2c_start(uint8_t sla) U8G_NOINLINE;
 uint8_t u8g_i2c_send_byte(uint8_t data) U8G_NOINLINE;
 uint8_t u8g_i2c_send_mode(uint8_t mode) U8G_NOINLINE;
